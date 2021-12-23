@@ -1,8 +1,9 @@
-import { Error, Loading, WineCard } from './index';
-import { useWineData } from '../hooks/useWineData';
-import { Wine } from '../types/Wine';
+import { WineCard } from './index';
+import { useWineData } from '../../hooks/useWineData';
+import { Wine } from '../../types/Wine';
 import styled from '@emotion/styled';
-import { MEDIA_QUERY_END_POINT } from '../constants';
+import { MEDIA_QUERY_END_POINT } from '../../constants';
+import { Error, Loading } from '../common';
 
 export const WineContainer = ({ name }: { name: string }) => {
   const { data, error } = useWineData(name);

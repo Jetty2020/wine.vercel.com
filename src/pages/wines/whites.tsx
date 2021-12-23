@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import { WineContainer } from '../../components/WineContainer';
+import { WineContainer } from '../../components/wine';
 
 const WhitesPage: NextPage = () => {
   const name = 'whites';

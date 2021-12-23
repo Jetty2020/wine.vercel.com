@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Wine } from '../types/Wine';
+import { Wine } from '../../types/Wine';
 
 interface WineProps {
   wineData: Wine;
