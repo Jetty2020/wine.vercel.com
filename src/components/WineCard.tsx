@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import Image from 'next/image';
 import { Wine } from '../types/Wine';
 
 interface WineProps {
@@ -11,7 +10,7 @@ export const WineCard = ({ wineData }: WineProps) => {
 
   return (
     <Container>
-      <Image src={image} alt="Wine-Imge" />
+      <img src={image} alt="Wine-Imge" />
       <h2>
         {wine}
         <Average>{rating.average}</Average>
