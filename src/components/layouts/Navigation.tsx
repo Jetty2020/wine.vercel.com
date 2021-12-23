@@ -1,11 +1,17 @@
 import Link from 'next/link';
 import { ROUTES } from '../../constants';
 
+interface INNERSUBS {
+  ID: number;
+  PATH: string;
+  LABEL: string;
+  ORDER: number;
+}
 interface ROUTE {
   ID: number;
   PATH: string;
   LABEL: string;
-  SUBS?: Array<ROUTE>;
+  SUBS: Array<INNERSUBS>;
 }
 
 export const Navigation = () => {
@@ -22,7 +28,7 @@ export const Navigation = () => {
                 </Link>
                 <ul>
                   {routeObject.SUBS &&
-                    routeObject.SUBS.map((subRouteObject: ROUTE) => {
+                    routeObject.SUBS.map((subRouteObject: INNERSUBS) => {
                       return (
                         <li key={subRouteObject.LABEL}>
                           <Link
