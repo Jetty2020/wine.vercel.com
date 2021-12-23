@@ -21,17 +21,18 @@ export const Navigation = () => {
                   <a>{routeObject.LABEL}</a>
                 </Link>
                 <ul>
-                  {routeObject?.SUBS.map((subRouteObject: ROUTE) => {
-                    return (
-                      <li key={subRouteObject.LABEL}>
-                        <Link
-                          href={`${routeObject.PATH}${subRouteObject.PATH}`}
-                        >
-                          <a>{subRouteObject.LABEL}</a>
-                        </Link>
-                      </li>
-                    );
-                  })}
+                  {routeObject.SUBS &&
+                    routeObject.SUBS.map((subRouteObject: ROUTE) => {
+                      return (
+                        <li key={subRouteObject.LABEL}>
+                          <Link
+                            href={`${routeObject.PATH}${subRouteObject.PATH}`}
+                          >
+                            <a>{subRouteObject.LABEL}</a>
+                          </Link>
+                        </li>
+                      );
+                    })}
                 </ul>
               </li>
             );
